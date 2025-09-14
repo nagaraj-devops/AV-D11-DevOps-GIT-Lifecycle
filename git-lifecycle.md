@@ -76,8 +76,7 @@ The Git lifecycle in a DevOps workflow defines how code changes flow from develo
 ---
 
 # Git Lifecycle in DevOps (Simplified Flow)
-1. **Code** → 2. **Commit** → 3. **Push** → 4. **Build** → 5. **Test** →  
-6. **Release** → 7. **Deploy** → 8. **Operate** → 9. **Feedback**
+1. **Code** → 2. **Commit** → 3. **Push** → 4. **Build** → 5. **Test** → 6. **Release** → 7. **Deploy** → 8. **Operate** → 9. **Feedback**
 
 ---
 
