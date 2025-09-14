@@ -86,3 +86,6 @@ Resolve conflicts → Edit → git add → git commit
 Tag release → git tag vX.X.X
 
 ✅ This lifecycle ensures collaboration, automation, and faster delivery of code with minimal errors.
+
+
+<img width="748" height="446" alt="image" src="https://github.com/user-attachments/assets/40c7a771-7c4b-4acf-85e6-f29db076287a" />
