@@ -89,3 +89,8 @@ The Git lifecycle in a DevOps workflow defines how code changes flow from develo
 
 ---
 <img width="748" height="446" alt="image" src="https://github.com/user-attachments/assets/40c7a771-7c4b-4acf-85e6-f29db076287a" />
+
+---
+
+<img width="1099" height="426" alt="gfg2" src="https://github.com/user-attachments/assets/9e982034-29ee-47c5-9b35-4bc75802159e" />
+
