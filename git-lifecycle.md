@@ -1,91 +1,92 @@
-DevOps Git Lifecycle
-1. Planning
+# DevOps – Git Lifecycle
 
-Define requirements, tasks, and issues (via Jira, Trello, GitHub Issues, etc.)
+The Git lifecycle in a DevOps workflow defines how code changes flow from development to production with proper version control, collaboration, and automation.
 
-Map features and bug fixes to branches.
+---
 
-2. Code (Development)
+## 1. Code
+- Developers write code locally.
+- Code is tracked with **Git**.
+- Branching strategies are applied (e.g., `feature`, `develop`, `release`, `main`).
 
-Clone repository → git clone
+---
 
-Create feature branch → git checkout -b feature/new-feature
+## 2. Commit
+- Changes are staged (`git add`).
+- Commits are created (`git commit`).
+- Best practices:
+  - Atomic commits (small, single-purpose).
+  - Meaningful commit messages.
 
-Code changes are made in isolation.
+---
 
-3. Build
+## 3. Push
+- Code is pushed to a **remote repository** (GitHub, GitLab, Bitbucket).
+- Collaboration happens via pull requests (PRs) / merge requests (MRs).
 
-Commit changes locally → git add . + git commit -m "message"
+---
 
-Continuous Integration (CI) tools (Jenkins, GitHub Actions, GitLab CI, etc.) build and validate code.
+## 4. Build
+- Triggered by **CI/CD pipeline** after push or merge.
+- Steps include:
+  - Code compilation
+  - Dependency installation
+  - Static code analysis
 
-4. Test
+---
 
-Automated tests run during CI pipeline:
+## 5. Test
+- Automated testing integrated:
+  - Unit tests
+  - Integration tests
+  - Security scans
+  - Performance tests
 
-Unit tests
+---
 
-Integration tests
+## 6. Release
+- Build artifacts are versioned and stored (e.g., Docker images, JAR/WAR, packages).
+- Tagged in Git (`git tag`).
+- Release branches created for stable versions.
 
-Security scans
+---
 
-Ensures code stability before merging.
+## 7. Deploy
+- Deployment to different environments:
+  - **Dev** → internal testing
+  - **QA/Staging** → pre-production validation
+  - **Production** → live environment
+- Automated with tools like Jenkins, GitHub Actions, GitLab CI, or ArgoCD.
 
-5. Release
+---
 
-Merge branch into main/develop via Pull Request (PR) or Merge Request (MR).
+## 8. Operate
+- Application monitored in production:
+  - Logging (ELK, Splunk)
+  - Monitoring (Prometheus, Grafana, CloudWatch)
+  - Alerting (PagerDuty, OpsGenie)
 
-Peer code review ensures quality.
+---
 
-Git tagging (git tag v1.0.0) for versioning.
+## 9. Feedback
+- User and system feedback collected.
+- Metrics used to improve future cycles.
+- Continuous improvement of code and pipelines.
 
-6. Deploy
+---
 
-CI/CD pipeline deploys to environments:
+# Git Lifecycle in DevOps (Simplified Flow)
+1. **Code** → 2. **Commit** → 3. **Push** → 4. **Build** → 5. **Test** →  
+6. **Release** → 7. **Deploy** → 8. **Operate** → 9. **Feedback**
 
-Dev → Staging → Production
+---
 
-Tools: Jenkins, GitHub Actions, GitLab, ArgoCD, Spinnaker, etc.
+## Tools Commonly Used
+- **Version Control**: Git, GitHub, GitLab, Bitbucket  
+- **CI/CD**: Jenkins, GitHub Actions, GitLab CI/CD, CircleCI  
+- **Build & Packaging**: Maven, Gradle, Docker  
+- **Deployment**: Kubernetes, Helm, Terraform, Ansible  
+- **Monitoring**: Prometheus, Grafana, ELK, CloudWatch  
 
-7. Operate
-
-Application runs in production.
-
-Monitoring tools: Prometheus, Grafana, ELK, CloudWatch.
-
-Rollback strategies in case of failure.
-
-8. Monitor & Feedback
-
-Continuous monitoring of logs, metrics, and performance.
-
-Feedback loop → Issues raised → Back to Planning phase.
-
-🛠️ Common Git Commands in Lifecycle
-
-Clone repo → git clone
-
-Check status → git status
-
-Switch branch → git checkout
-
-Create branch → git checkout -b
-
-Stage changes → git add
-
-Commit changes → git commit
-
-Push changes → git push
-
-Pull updates → git pull
-
-Merge branch → git merge
-
-Resolve conflicts → Edit → git add → git commit
-
-Tag release → git tag vX.X.X
-
-✅ This lifecycle ensures collaboration, automation, and faster delivery of code with minimal errors.
-
-
+---
 <img width="748" height="446" alt="image" src="https://github.com/user-attachments/assets/40c7a771-7c4b-4acf-85e6-f29db076287a" />
